@@ -22,10 +22,18 @@ void Capturar_Enteros(){
     
 }
 
+void mostrar(int n, char cadena[]){
+    for (size_t i = 0; i < n; i++)
+    {
+        printf("%s", cadena);
+    }
+    
+}
 
 int main(){
     char op;
-
+    char cadena[20];
+    int n;
     do
     {
       printf("1) Capturar enteros\n");
@@ -40,7 +48,12 @@ int main(){
         Capturar_Enteros();
         break;
     case '2':
-
+        printf("Escribe una Cadena de caracteres: ");
+        fflush(stdin);
+        fgets(cadena, sizeof(cadena), stdin);
+        printf("Veces que se repetira?: ");
+        scanf("%i", &n);
+        mostrar(n, cadena);
         break;
     case '3':
 
